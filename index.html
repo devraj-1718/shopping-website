@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiacart — Your Fashion Destination</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a class="logo" href="#" data-filter="all">india<span>cart</span></a>
+        <div class="header-right">
+            <div class="search-box">
+                <input type="search" id="search-input" placeholder="Search products..." aria-label="Search products">
+            </div>
+            <a href="#" id="wish-open">♡ Wishlist (<span id="wish-count">0</span>)</a>
+            <a href="#" class="cart-btn" id="cart-open">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav id="main-nav">
+        <a href="#" data-filter="all" class="active">Home</a>
+        <a href="#" data-filter="men">Men</a>
+        <a href="#" data-filter="women">Women</a>
+        <a href="#" data-filter="kids">Kids</a>
+        <a href="#" data-filter="sale">Sale</a>
+        <a href="#footer-contact" data-scroll="footer">Contact</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">New Arrivals 2026</div>
+        <h2>Dress to<br>Impress</h2>
+        <p>Explore the freshest styles in men's, women's, and kids' fashion — all in one place.</p>
+        <a class="hero-btn" href="#products" id="hero-btn">Shop the Collection</a>
+    </section>
+
+    <!-- PROMO STRIP -->
+    <div class="promo-strip">
+        <span>🚚 <div><strong>Free Shipping</strong> on orders above ₹999</div></span>
+        <span>↩ <div><strong>Easy Returns</strong> 30-day no-questions policy</div></span>
+        <span>🔒 <div><strong>Secure Payments</strong> UPI, Cards &amp; Wallets</div></span>
+    </div>
+
+    <!-- SHOP BY CATEGORY -->
+    <div class="section-head">
+        <h3>Shop by Category</h3>
+    </div>
+    <div class="categories">
+        <div class="cat-card" data-filter="men">
+            <div class="cat-icon">👔</div>
+            <h5>Men</h5>
+        </div>
+        <div class="cat-card" data-filter="women">
+            <div class="cat-icon">👗</div>
+            <h5>Women</h5>
+        </div>
+        <div class="cat-card" data-filter="kids">
+            <div class="cat-icon">👶</div>
+            <h5>Kids</h5>
+        </div>
+        <div class="cat-card" data-filter="jackets">
+            <div class="cat-icon">🧥</div>
+            <h5>Jackets</h5>
+        </div>
+        <div class="cat-card" data-filter="footwear">
+            <div class="cat-icon">👟</div>
+            <h5>Footwear</h5>
+        </div>
+        <div class="cat-card" data-filter="accessories">
+            <div class="cat-icon">🕶</div>
+            <h5>Accessories</h5>
+        </div>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="section-head" id="products">
+        <div>
+            <h3 id="grid-title">Featured Products</h3>
+            <div class="result-count" id="result-count"></div>
+        </div>
+        <div class="grid-tools">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select">
+                <option value="featured">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name (A–Z)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="product-grid" id="product-grid"></div>
+
+    <!-- FOOTER -->
+    <footer id="footer-contact">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a class="logo" href="#" data-filter="all">india<span>cart</span>.in</a>
+                <p>Your one-stop fashion destination for men, women, and kids.</p>
+            </div>
+            <div class="footer-links">
+                <h6>Shop</h6>
+                <a href="#" data-filter="men">Men</a>
+                <a href="#" data-filter="women">Women</a>
+                <a href="#" data-filter="kids">Kids</a>
+                <a href="#" data-filter="sale">Sale</a>
+            </div>
+            <div class="footer-links">
+                <h6>Help</h6>
+                <a href="#">Contact Us</a>
+                <a href="#">Returns</a>
+                <a href="#">Track Order</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer-links">
+                <h6>Company</h6>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-links newsletter">
+                <h6>Newsletter</h6>
+                <p>Get offers &amp; new arrivals in your inbox.</p>
+                <form id="newsletter-form" novalidate>
+                    <input type="email" id="newsletter-email" placeholder="you@example.com" aria-label="Email">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Indiacart.in · All Rights Reserved</p>
+            <span class="team-tag">Project by Team Thinker`s — Devraj, Sonam, Bhawna</span>
+        </div>
+    </footer>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- CART DRAWER -->
+    <aside class="drawer" id="cart-drawer" aria-label="Shopping cart">
+        <div class="drawer-head">
+            <h3>Your Cart</h3>
+            <button class="icon-btn" id="cart-close" aria-label="Close cart">✕</button>
+        </div>
+        <div class="drawer-body" id="cart-body"></div>
+        <div class="drawer-foot" id="cart-foot"></div>
+    </aside>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+        <button class="icon-btn modal-close" id="modal-close" aria-label="Close">✕</button>
+        <div id="modal-content"></div>
+    </div>
+
+    <!-- TOAST + BACK TO TOP -->
+    <div class="toast" id="toast"></div>
+    <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
